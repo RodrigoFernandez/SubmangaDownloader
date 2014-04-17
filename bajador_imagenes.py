@@ -9,6 +9,8 @@ import zipfile
 import shutil
 import time
 import random
+import sys
+import getopt
 
 
 def zipeador(carpeta_origen, carpeta_destino, nombre_zip):
@@ -80,17 +82,59 @@ def bajar_capitulo(raiz_dir_destino, url_capitulo):
 		bajar_imagen(siguiente_e_imagen[1], nombre_img, dir_destino)
 		# 	se pasa a la siguiente url
 		url = siguiente_e_imagen[0]
-		time.sleep(random.choice([4,5,6]))
+		time.sleep(random.choice([5,6,7]))
 		indicador = obtener_indicador(url)
-	
-	zipeador(dir_destino, raiz_dir_destino, nro_capitulo)
+
+	zipeador(dir_destino, raiz_dir_destino + '/', nro_capitulo + '.zip')
 	eliminar_directorio(dir_destino)
-	
+	print 'Se genero el zip: %s.zip' % (nro_capitulo, )
+		
 	print 'termina'
-	return 0
+	return
 	
+def mostrar_ayuda():
+	print """
+		Script para descargar imagenes de submanga.
+		Uso:
+			python bajador_imagenes.py -i <url_de_descarga> -o <directorio_destino>
+		
+		-i	se le pasa la url del capitulo a descargar (es un parametro obligatorio)
+		-o	se le pasa el directorio donde se quiere dejar la descarga realizada (en caso de no pasar este parametro se toma el directorio actual)
+		-h	muestra esta ayuda
+	"""
+
+def lector_argumentos(args):
+	opciones, argumentos = getopt.getopt(args, "i:o:h")
+	
+	directorio_destino = None
+	url_origen = None
+	
+	# opciones es una lista de tuplas
+	for opcion in opciones:
+		if opcion[0] == '-h':
+			mostrar_ayuda()
+			return
+	
+	# opciones es una lista de tuplas
+	for opcion in opciones:
+		if opcion[0] == '-i':
+			url_origen = opcion[1]
+		elif opcion[0] == '-o':
+			directorio_destino = opcion[1]
+		
+	if url_origen is None:
+		print "Debe pasar la opcion i"
+	
+	if directorio_destino is None:
+		print "Se tomara el directorio actual como destino"
+		directorio_destino = '.'
+	
+	try:
+		bajar_capitulo(directorio_destino, url_origen)
+	except:
+		print "\n\tError en la descarga, verifique los datos de ingreso. Verifique si la pagina esta en funcionamiento.\n"
+		print "\t" + str(sys.exc_info()[0])
+
 if __name__ == '__main__':
-	# La idea es tener el listado de los capitulos de naruto que me faltan bajar
-	# Se lee la lista y por cada url se bajan las imagenes y se guardan en la
-	# carpeta correspondiente al capitulo. Todo esto desde submanga.com
-	bajar_capitulo('.', 'http://submanga.com/Naruto/568/140712')
+	# Se saca el nombre del script
+	lector_argumentos(sys.argv[1:])
