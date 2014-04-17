@@ -1,0 +1,353 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="DreamPie Format" content="1">
+<title>DreamPie History</title>
+<style>
+body {
+  white-space: pre-wrap;
+  font-family: Courier New;
+  font-size: 10240;
+  color: #ffffff;
+  background-color: #000000;
+}
+span.folded {
+ display: none;
+}
+span.commandsep {
+ display: none;
+}
+span.command-defs {
+}
+span.command {
+}
+span.output {
+}
+span.fold-message {
+  color: #a7a7a7;
+  background-color: #003b6c;
+}
+span.message {
+  color: #ffff00;
+}
+span.prompt {
+  color: #e400b6;
+}
+span.exception {
+  color: #ff8080;
+}
+span.result-ind {
+  color: #0000ff;
+}
+span.result {
+  color: #bcffff;
+}
+span.stderr {
+  color: #ff8080;
+}
+span.stdout {
+  color: #bcffff;
+}
+span.stdin {
+}
+span.bracket-match {
+  background-color: #00008b;
+}
+span.comment {
+  color: #c9a3a0;
+}
+span.number {
+  color: #aeacff;
+}
+span.string {
+  color: #00e400;
+}
+span.builtin {
+  color: #efcfcf;
+}
+span.keyword {
+  color: #ff7700;
+}
+</style>
+</head>
+<body><span class="message">Python 2.6.5 (r265:79063, Apr 16 2010, 13:09:56) 
+[GCC 4.4.3] on linux2
+Type "copyright", "credits" or "license()" for more information.
+DreamPie 1.0.2
+</span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">import</span> urllib
+</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">import</span> BeautifulSoup
+</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
+  File "&lt;pyshell#1&gt;", line 1, in &lt;module&gt;
+    import BeautifulSoup
+ImportError: No module named BeautifulSoup
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">import</span> Beautifulsoup
+</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
+  File "&lt;pyshell#2&gt;", line 1, in &lt;module&gt;
+    import Beautifulsoup
+ImportError: No module named Beautifulsoup
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">import</span> BeautifulSoup
+</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
+  File "&lt;pyshell#3&gt;", line 1, in &lt;module&gt;
+    import BeautifulSoup
+ImportError: No module named BeautifulSoup
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">import</span> BeautifulSoup
+</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> BeautifulSoup <span class="keyword">import</span> BeautifulSoup
+<span class="prompt">... </span>pagina = Beautiful(urllib.urlopen(<span class="string">'http://submanga.com/c/140712'</span>).read())
+</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
+  File "&lt;pyshell#5&gt;", line 2, in &lt;module&gt;
+    pagina = Beautiful(urllib.urlopen('http://submanga.com/c/140712').read())
+NameError: name 'Beautiful' is not defined
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>pagina = BeautifulSoup(urllib.urlopen(<span class="string">'http://submanga.com/c/140712'</span>).read())
+</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>pagina.prettify()
+</span><span class="commandsep"></span><span class="output"><span class="result-ind">0: </span><span class="result">'&lt;!DOCTYPE HTML&gt;\n&lt;html&gt;\n &lt;head&gt;\n  &lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8" /&gt;\n  &lt;title&gt;\n   Naruto 568 &amp;mdash; Shinshin Fansub &amp;mdash; submanga\n  &lt;/title&gt;\n  &lt;base href="http://submanga.com/" /&gt;\n  &lt;link href="./s/lhd.css" type="text/css" rel="stylesheet" /&gt;\n &lt;/head&gt;\n &lt;body&gt;\n  &lt;table id="t" border="0" cellpadding="0" cellspacing="0"&gt;\n   &lt;tr&gt;\n    &lt;td class="l" width="94%"&gt;\n     &lt;a href="./" target="_top"&gt;\n      &lt;strong&gt;\n       submanga.com\n      &lt;/strong&gt;\n     &lt;/a&gt;\n     &amp;rsaquo;\n     &lt;a href="./scanlation/Shinshin_Fansub" target="_top"&gt;\n      Shinshin Fansub\n     &lt;/a&gt;\n     &amp;rsaquo;\n     &lt;a href="./Naruto/scanlation/Shinshin_Fansub" target="_top"&gt;\n      Naruto\n     &lt;/a&gt;\n     &amp;rsaquo;\n     &lt;a href="./Naruto/568/140712" target="_top"&gt;\n      568\n     &lt;/a&gt;\n    &lt;/td&gt;\n    &lt;th width="1%"&gt;\n     &lt;select onchange="window.location.href=\'http://submanga.com/c/140712/\'+this.value"&gt;\n      &lt;option selected value="1"&gt;\n       1\n      &lt;/option&gt;\n      &lt;option value="2"&gt;\n       2\n      &lt;/option&gt;\n      &lt;option value="3"&gt;\n       3\n      &lt;/option&gt;\n      &lt;option value="4"&gt;\n       4\n      &lt;/option&gt;\n      &lt;option value="5"&gt;\n       5\n      &lt;/option&gt;\n      &lt;option value="6"&gt;\n       6\n      &lt;/option&gt;\n      &lt;option value="7"&gt;\n       7\n      &lt;/option&gt;\n      &lt;option value="8"&gt;\n       8\n      &lt;/option&gt;\n      &lt;option value="9"&gt;\n       9\n      &lt;/option&gt;\n      &lt;option value="10"&gt;\n       10\n      &lt;/option&gt;\n      &lt;option value="11"&gt;\n       11\n      &lt;/option&gt;\n      &lt;option value="12"&gt;\n       12\n      &lt;/option&gt;\n      &lt;option value="13"&gt;\n       13\n      &lt;/option&gt;\n      &lt;option value="14"&gt;\n       14\n      &lt;/option&gt;\n      &lt;option value="15"&gt;\n       15\n      &lt;/option&gt;\n      &lt;option value="16"&gt;\n       16\n      &lt;/option&gt;\n      &lt;option value="17"&gt;\n       17\n      &lt;/option&gt;\n      &lt;option value="18"&gt;\n       18\n      &lt;/option&gt;\n     &lt;/select&gt;\n    &lt;/th&gt;\n    &lt;th width="1%"&gt;\n     &lt;a href="./hd"&gt;\n      &lt;img src="./s/hdoff.gif" /&gt;\n     &lt;/a&gt;\n    &lt;/th&gt;\n    &lt;th width="1%"&gt;\n     &lt;a href="./ajustar"&gt;\n      &lt;img src="./s/hda.gif" /&gt;\n     &lt;/a&gt;\n    &lt;/th&gt;\n    &lt;th width="1%"&gt;\n     &lt;a href="http://submanga.com/c/140712/1"&gt;\n      &lt;img src="./s/hdl.gif" /&gt;\n     &lt;/a&gt;\n    &lt;/th&gt;\n    &lt;th width="1%"&gt;\n     &lt;a href="http://submanga.com/c/140712/2"&gt;\n      &lt;img src="./s/hdr.gif" /&gt;\n     &lt;/a&gt;\n    &lt;/th&gt;\n   &lt;/tr&gt;\n  &lt;/table&gt;\n  &lt;div&gt;\n   &lt;a href="http://submanga.com/c/140712/2"&gt;\n    &lt;img src="http://img3.submanga.com/pages/140/140712e5e/1.jpg" /&gt;\n   &lt;/a&gt;\n  &lt;/div&gt;\n  &lt;script type="text/javascript"&gt;\n   document.onkeydown=M;function M(e){if(!e)var e=window.event;if(e.keyCode)T=e.keyCode;if(e.which)T=e.which;if(T==37){window.location.href="http://submanga.com/c/140712/1"}if(T==39){window.location.href="http://submanga.com/c/140712/2"}}\n  &lt;/script&gt;\n  &lt;script src="http://www.google-analytics.com/urchin.js" type="text/javascript"&gt;\n  &lt;/script&gt;\n  &lt;script type="text/javascript"&gt;\n   _uacct="UA-27123143-1";urchinTracker();\n  &lt;/script&gt;\n &lt;/body&gt;\n&lt;/html&gt;'
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">print</span> pagina.prettify()
+</span><span class="commandsep"></span><span class="output"><span class="stdout">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8" /&gt;
+  &lt;title&gt;
+   Naruto 568 &amp;mdash; Shinshin Fansub &amp;mdash; submanga
+  &lt;/title&gt;
+  &lt;base href="http://submanga.com/" /&gt;
+  &lt;link href="./s/lhd.css" type="text/css" rel="stylesheet" /&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;table id="t" border="0" cellpadding="0" cellspacing="0"&gt;
+   &lt;tr&gt;
+    &lt;td class="l" width="94%"&gt;
+     &lt;a href="./" target="_top"&gt;
+      &lt;strong&gt;
+       submanga.com
+      &lt;/strong&gt;
+     &lt;/a&gt;
+     &amp;rsaquo;
+     &lt;a href="./scanlation/Shinshin_Fansub" target="_top"&gt;
+      Shinshin Fansub
+     &lt;/a&gt;
+     &amp;rsaquo;
+     &lt;a href="./Naruto/scanlation/Shinshin_Fansub" target="_top"&gt;
+      Naruto
+     &lt;/a&gt;
+     &amp;rsaquo;
+     &lt;a href="./Naruto/568/140712" target="_top"&gt;
+      568
+     &lt;/a&gt;
+    &lt;/td&gt;
+    &lt;th width="1%"&gt;
+     &lt;select onchange="window.location.href='http://submanga.com/c/140712/'+this.value"&gt;
+      &lt;option selected value="1"&gt;
+       1
+      &lt;/option&gt;
+      &lt;option value="2"&gt;
+       2
+      &lt;/option&gt;
+      &lt;option value="3"&gt;
+       3
+      &lt;/option&gt;
+      &lt;option value="4"&gt;
+       4
+      &lt;/option&gt;
+      &lt;option value="5"&gt;
+       5
+      &lt;/option&gt;
+      &lt;option value="6"&gt;
+       6
+      &lt;/option&gt;
+      &lt;option value="7"&gt;
+       7
+      &lt;/option&gt;
+      &lt;option value="8"&gt;
+       8
+      &lt;/option&gt;
+      &lt;option value="9"&gt;
+       9
+      &lt;/option&gt;
+      &lt;option value="10"&gt;
+       10
+      &lt;/option&gt;
+      &lt;option value="11"&gt;
+       11
+      &lt;/option&gt;
+      &lt;option value="12"&gt;
+       12
+      &lt;/option&gt;
+      &lt;option value="13"&gt;
+       13
+      &lt;/option&gt;
+      &lt;option value="14"&gt;
+       14
+      &lt;/option&gt;
+      &lt;option value="15"&gt;
+       15
+      &lt;/option&gt;
+      &lt;option value="16"&gt;
+       16
+      &lt;/option&gt;
+      &lt;option value="17"&gt;
+       17
+      &lt;/option&gt;
+      &lt;option value="18"&gt;
+       18
+      &lt;/option&gt;
+     &lt;/select&gt;
+    &lt;/th&gt;
+    &lt;th width="1%"&gt;
+     &lt;a href="./hd"&gt;
+      &lt;img src="./s/hdoff.gif" /&gt;
+     &lt;/a&gt;
+    &lt;/th&gt;
+    &lt;th width="1%"&gt;
+     &lt;a href="./ajustar"&gt;
+      &lt;img src="./s/hda.gif" /&gt;
+     &lt;/a&gt;
+    &lt;/th&gt;
+    &lt;th width="1%"&gt;
+     &lt;a href="http://submanga.com/c/140712/1"&gt;
+      &lt;img src="./s/hdl.gif" /&gt;
+     &lt;/a&gt;
+    &lt;/th&gt;
+    &lt;th width="1%"&gt;
+     &lt;a href="http://submanga.com/c/140712/2"&gt;
+      &lt;img src="./s/hdr.gif" /&gt;
+     &lt;/a&gt;
+    &lt;/th&gt;
+   &lt;/tr&gt;
+  &lt;/table&gt;
+  &lt;div&gt;
+   &lt;a href="http://submanga.com/c/140712/2"&gt;
+    &lt;img src="http://img3.submanga.com/pages/140/140712e5e/1.jpg" /&gt;
+   &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;script type="text/javascript"&gt;
+   document.onkeydown=M;function M(e){if(!e)var e=window.event;if(e.keyCode)T=e.keyCode;if(e.which)T=e.which;if(T==37){window.location.href="http://submanga.com/c/140712/1"}if(T==39){window.location.href="http://submanga.com/c/140712/2"}}
+  &lt;/script&gt;
+  &lt;script src="http://www.google-analytics.com/urchin.js" type="text/javascript"&gt;
+  &lt;/script&gt;
+  &lt;script type="text/javascript"&gt;
+   _uacct="UA-27123143-1";urchinTracker();
+  &lt;/script&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>pagina.body
+</span><span class="commandsep"></span><span class="output"><span class="result-ind">1: </span><span class="result">&lt;body&gt;&lt;table id="t" border="0" cellpadding="0" cellspacing="0"&gt;&lt;tr&gt;&lt;td class="l" width="94%"&gt;&lt;a href="./" target="_top"&gt;&lt;strong&gt;submanga.com&lt;/strong&gt;&lt;/a&gt; &amp;rsaquo; &lt;a href="./scanlation/Shinshin_Fansub" target="_top"&gt;Shinshin Fansub&lt;/a&gt; &amp;rsaquo; &lt;a href="./Naruto/scanlation/Shinshin_Fansub" target="_top"&gt;Naruto&lt;/a&gt; &amp;rsaquo; &lt;a href="./Naruto/568/140712" target="_top"&gt;568&lt;/a&gt;&lt;/td&gt;&lt;th width="1%"&gt;&lt;select onchange="window.location.href='http://submanga.com/c/140712/'+this.value"&gt;&lt;option selected value="1"&gt;1&lt;/option&gt;&lt;option value="2"&gt;2&lt;/option&gt;&lt;option value="3"&gt;3&lt;/option&gt;&lt;option value="4"&gt;4&lt;/option&gt;&lt;option value="5"&gt;5&lt;/option&gt;&lt;option value="6"&gt;6&lt;/option&gt;&lt;option value="7"&gt;7&lt;/option&gt;&lt;option value="8"&gt;8&lt;/option&gt;&lt;option value="9"&gt;9&lt;/option&gt;&lt;option value="10"&gt;10&lt;/option&gt;&lt;option value="11"&gt;11&lt;/option&gt;&lt;option value="12"&gt;12&lt;/option&gt;&lt;option value="13"&gt;13&lt;/option&gt;&lt;option value="14"&gt;14&lt;/option&gt;&lt;option value="15"&gt;15&lt;/option&gt;&lt;option value="16"&gt;16&lt;/option&gt;&lt;option value="17"&gt;17&lt;/option&gt;&lt;option value="18"&gt;18&lt;/option&gt;&lt;/select&gt;&lt;/th&gt;&lt;th width="1%"&gt;&lt;a href="./hd"&gt;&lt;img src="./s/hdoff.gif" /&gt;&lt;/a&gt;&lt;/th&gt;&lt;th width="1%"&gt;&lt;a href="./ajustar"&gt;&lt;img src="./s/hda.gif" /&gt;&lt;/a&gt;&lt;/th&gt;&lt;th width="1%"&gt;&lt;a href="http://submanga.com/c/140712/1"&gt;&lt;img src="./s/hdl.gif" /&gt;&lt;/a&gt;&lt;/th&gt;&lt;th width="1%"&gt;&lt;a href="http://submanga.com/c/140712/2"&gt;&lt;img src="./s/hdr.gif" /&gt;&lt;/a&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/table&gt;&lt;div&gt;&lt;a href="http://submanga.com/c/140712/2"&gt;&lt;img src="http://img3.submanga.com/pages/140/140712e5e/1.jpg" /&gt;&lt;/a&gt;&lt;/div&gt;&lt;script type="text/javascript"&gt;document.onkeydown=M;function M(e){if(!e)var e=window.event;if(e.keyCode)T=e.keyCode;if(e.which)T=e.which;if(T==37){window.location.href="http://submanga.com/c/140712/1"}if(T==39){window.location.href="http://submanga.com/c/140712/2"}}&lt;/script&gt;&lt;script src="http://www.google-analytics.com/urchin.js" type="text/javascript"&gt;&lt;/script&gt;&lt;script type="text/javascript"&gt;_uacct="UA-27123143-1";urchinTracker();&lt;/script&gt;&lt;/body&gt;
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">for</span> i <span class="keyword">in</span> pagina.body:
+<span class="prompt">... </span>    <span class="keyword">print</span> i
+</span><span class="commandsep"></span><span class="output"><span class="stdout">&lt;table id="t" border="0" cellpadding="0" cellspacing="0"&gt;&lt;tr&gt;&lt;td class="l" width="94%"&gt;&lt;a href="./" target="_top"&gt;&lt;strong&gt;submanga.com&lt;/strong&gt;&lt;/a&gt; &amp;rsaquo; &lt;a href="./scanlation/Shinshin_Fansub" target="_top"&gt;Shinshin Fansub&lt;/a&gt; &amp;rsaquo; &lt;a href="./Naruto/scanlation/Shinshin_Fansub" target="_top"&gt;Naruto&lt;/a&gt; &amp;rsaquo; &lt;a href="./Naruto/568/140712" target="_top"&gt;568&lt;/a&gt;&lt;/td&gt;&lt;th width="1%"&gt;&lt;select onchange="window.location.href='http://submanga.com/c/140712/'+this.value"&gt;&lt;option selected value="1"&gt;1&lt;/option&gt;&lt;option value="2"&gt;2&lt;/option&gt;&lt;option value="3"&gt;3&lt;/option&gt;&lt;option value="4"&gt;4&lt;/option&gt;&lt;option value="5"&gt;5&lt;/option&gt;&lt;option value="6"&gt;6&lt;/option&gt;&lt;option value="7"&gt;7&lt;/option&gt;&lt;option value="8"&gt;8&lt;/option&gt;&lt;option value="9"&gt;9&lt;/option&gt;&lt;option value="10"&gt;10&lt;/option&gt;&lt;option value="11"&gt;11&lt;/option&gt;&lt;option value="12"&gt;12&lt;/option&gt;&lt;option value="13"&gt;13&lt;/option&gt;&lt;option value="14"&gt;14&lt;/option&gt;&lt;option value="15"&gt;15&lt;/option&gt;&lt;option value="16"&gt;16&lt;/option&gt;&lt;option value="17"&gt;17&lt;/option&gt;&lt;option value="18"&gt;18&lt;/option&gt;&lt;/select&gt;&lt;/th&gt;&lt;th width="1%"&gt;&lt;a href="./hd"&gt;&lt;img src="./s/hdoff.gif" /&gt;&lt;/a&gt;&lt;/th&gt;&lt;th width="1%"&gt;&lt;a href="./ajustar"&gt;&lt;img src="./s/hda.gif" /&gt;&lt;/a&gt;&lt;/th&gt;&lt;th width="1%"&gt;&lt;a href="http://submanga.com/c/140712/1"&gt;&lt;img src="./s/hdl.gif" /&gt;&lt;/a&gt;&lt;/th&gt;&lt;th width="1%"&gt;&lt;a href="http://submanga.com/c/140712/2"&gt;&lt;img src="./s/hdr.gif" /&gt;&lt;/a&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;div&gt;&lt;a href="http://submanga.com/c/140712/2"&gt;&lt;img src="http://img3.submanga.com/pages/140/140712e5e/1.jpg" /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;script type="text/javascript"&gt;document.onkeydown=M;function M(e){if(!e)var e=window.event;if(e.keyCode)T=e.keyCode;if(e.which)T=e.which;if(T==37){window.location.href="http://submanga.com/c/140712/1"}if(T==39){window.location.href="http://submanga.com/c/140712/2"}}&lt;/script&gt;
+&lt;script src="http://www.google-analytics.com/urchin.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;_uacct="UA-27123143-1";urchinTracker();&lt;/script&gt;
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">for</span> i <span class="keyword">in</span> pagina.body:
+<span class="prompt">... </span>    <span class="keyword">print</span> i + <span class="string">'\n------------------------'</span>
+</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
+  File "&lt;pyshell#11&gt;", line 2, in &lt;module&gt;
+    print i + '\n------------------------'
+TypeError: unsupported operand type(s) for +: 'instance' and 'str'
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">for</span> i <span class="keyword">in</span> pagina.body:
+<span class="prompt">... </span>    <span class="keyword">print</span> (<span class="string">'%s\n----------'</span>) % (i,)
+</span><span class="commandsep"></span><span class="output"><span class="stdout">&lt;table id="t" border="0" cellpadding="0" cellspacing="0"&gt;&lt;tr&gt;&lt;td class="l" width="94%"&gt;&lt;a href="./" target="_top"&gt;&lt;strong&gt;submanga.com&lt;/strong&gt;&lt;/a&gt; &amp;rsaquo; &lt;a href="./scanlation/Shinshin_Fansub" target="_top"&gt;Shinshin Fansub&lt;/a&gt; &amp;rsaquo; &lt;a href="./Naruto/scanlation/Shinshin_Fansub" target="_top"&gt;Naruto&lt;/a&gt; &amp;rsaquo; &lt;a href="./Naruto/568/140712" target="_top"&gt;568&lt;/a&gt;&lt;/td&gt;&lt;th width="1%"&gt;&lt;select onchange="window.location.href='http://submanga.com/c/140712/'+this.value"&gt;&lt;option selected value="1"&gt;1&lt;/option&gt;&lt;option value="2"&gt;2&lt;/option&gt;&lt;option value="3"&gt;3&lt;/option&gt;&lt;option value="4"&gt;4&lt;/option&gt;&lt;option value="5"&gt;5&lt;/option&gt;&lt;option value="6"&gt;6&lt;/option&gt;&lt;option value="7"&gt;7&lt;/option&gt;&lt;option value="8"&gt;8&lt;/option&gt;&lt;option value="9"&gt;9&lt;/option&gt;&lt;option value="10"&gt;10&lt;/option&gt;&lt;option value="11"&gt;11&lt;/option&gt;&lt;option value="12"&gt;12&lt;/option&gt;&lt;option value="13"&gt;13&lt;/option&gt;&lt;option value="14"&gt;14&lt;/option&gt;&lt;option value="15"&gt;15&lt;/option&gt;&lt;option value="16"&gt;16&lt;/option&gt;&lt;option value="17"&gt;17&lt;/option&gt;&lt;option value="18"&gt;18&lt;/option&gt;&lt;/select&gt;&lt;/th&gt;&lt;th width="1%"&gt;&lt;a href="./hd"&gt;&lt;img src="./s/hdoff.gif" /&gt;&lt;/a&gt;&lt;/th&gt;&lt;th width="1%"&gt;&lt;a href="./ajustar"&gt;&lt;img src="./s/hda.gif" /&gt;&lt;/a&gt;&lt;/th&gt;&lt;th width="1%"&gt;&lt;a href="http://submanga.com/c/140712/1"&gt;&lt;img src="./s/hdl.gif" /&gt;&lt;/a&gt;&lt;/th&gt;&lt;th width="1%"&gt;&lt;a href="http://submanga.com/c/140712/2"&gt;&lt;img src="./s/hdr.gif" /&gt;&lt;/a&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/table&gt;
+----------
+&lt;div&gt;&lt;a href="http://submanga.com/c/140712/2"&gt;&lt;img src="http://img3.submanga.com/pages/140/140712e5e/1.jpg" /&gt;&lt;/a&gt;&lt;/div&gt;
+----------
+&lt;script type="text/javascript"&gt;document.onkeydown=M;function M(e){if(!e)var e=window.event;if(e.keyCode)T=e.keyCode;if(e.which)T=e.which;if(T==37){window.location.href="http://submanga.com/c/140712/1"}if(T==39){window.location.href="http://submanga.com/c/140712/2"}}&lt;/script&gt;
+----------
+&lt;script src="http://www.google-analytics.com/urchin.js" type="text/javascript"&gt;&lt;/script&gt;
+----------
+&lt;script type="text/javascript"&gt;_uacct="UA-27123143-1";urchinTracker();&lt;/script&gt;
+----------
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">print</span> pagina.body[<span class="number">1</span>]
+</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
+  File "&lt;pyshell#13&gt;", line 1, in &lt;module&gt;
+    print pagina.body[1]
+  File "/usr/lib/pymodules/python2.6/BeautifulSoup.py", line 541, in __getitem__
+    return self._getAttrMap()[key]
+KeyError: 1
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">print</span> pagina.body.div
+</span><span class="commandsep"></span><span class="output"><span class="stdout">&lt;div&gt;&lt;a href="http://submanga.com/c/140712/2"&gt;&lt;img src="http://img3.submanga.com/pages/140/140712e5e/1.jpg" /&gt;&lt;/a&gt;&lt;/div&gt;
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">print</span> pagina.body.script
+</span><span class="commandsep"></span><span class="output"><span class="stdout">&lt;script type="text/javascript"&gt;document.onkeydown=M;function M(e){if(!e)var e=window.event;if(e.keyCode)T=e.keyCode;if(e.which)T=e.which;if(T==37){window.location.href="http://submanga.com/c/140712/1"}if(T==39){window.location.href="http://submanga.com/c/140712/2"}}&lt;/script&gt;
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">for</span> i <span class="keyword">in</span> pagina.body.script:
+<span class="prompt">... </span>    <span class="keyword">print</span> i
+</span><span class="commandsep"></span><span class="output"><span class="stdout">document.onkeydown=M;function M(e){if(!e)var e=window.event;if(e.keyCode)T=e.keyCode;if(e.which)T=e.which;if(T==37){window.location.href="http://submanga.com/c/140712/1"}if(T==39){window.location.href="http://submanga.com/c/140712/2"}}
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>pagina.findAll(<span class="string">'script'</span>)
+</span><span class="commandsep"></span><span class="output"><span class="result-ind">2: </span><span class="result">[&lt;script type="text/javascript"&gt;document.onkeydown=M;function M(e){if(!e)var e=window.event;if(e.keyCode)T=e.keyCode;if(e.which)T=e.which;if(T==37){window.location.href="http://submanga.com/c/140712/1"}if(T==39){window.location.href="http://submanga.com/c/140712/2"}}&lt;/script&gt;,
+ &lt;script src="http://www.google-analytics.com/urchin.js" type="text/javascript"&gt;&lt;/script&gt;,
+ &lt;script type="text/javascript"&gt;_uacct="UA-27123143-1";urchinTracker();&lt;/script&gt;]
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>pagina.findAll(<span class="string">'div'</span>)
+</span><span class="commandsep"></span><span class="output"><span class="result-ind">3: </span><span class="result">[&lt;div&gt;&lt;a href="http://submanga.com/c/140712/2"&gt;&lt;img src="http://img3.submanga.com/pages/140/140712e5e/1.jpg" /&gt;&lt;/a&gt;&lt;/div&gt;]
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="builtin">len</span>(pagina.findAll(<span class="string">'div'</span>))
+</span><span class="commandsep"></span><span class="output"><span class="result-ind">4: </span><span class="result">1
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>pagina.findAll(<span class="string">'div'</span>)
+</span><span class="commandsep"></span><span class="output"><span class="result-ind">5: </span><span class="result">[&lt;div&gt;&lt;a href="http://submanga.com/c/140712/2"&gt;&lt;img src="http://img3.submanga.com/pages/140/140712e5e/1.jpg" /&gt;&lt;/a&gt;&lt;/div&gt;]
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>pagina.findAll(<span class="string">'div'</span>).prettify()
+</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
+  File "&lt;pyshell#21&gt;", line 1, in &lt;module&gt;
+    pagina.findAll('div').prettify()
+AttributeError: 'ResultSet' object has no attribute 'prettify'
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>pagina2 = BeautifulSoup(pagina.findAll(<span class="string">'div'</span>))
+</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
+  File "&lt;pyshell#22&gt;", line 1, in &lt;module&gt;
+    pagina2 = BeautifulSoup(pagina.findAll('div'))
+  File "/usr/lib/pymodules/python2.6/BeautifulSoup.py", line 1499, in __init__
+    BeautifulStoneSoup.__init__(self, *args, **kwargs)
+  File "/usr/lib/pymodules/python2.6/BeautifulSoup.py", line 1230, in __init__
+    self._feed(isHTML=isHTML)
+  File "/usr/lib/pymodules/python2.6/BeautifulSoup.py", line 1245, in _feed
+    smartQuotesTo=self.smartQuotesTo, isHTML=isHTML)
+  File "/usr/lib/pymodules/python2.6/BeautifulSoup.py", line 1751, in __init__
+    self._detectEncoding(markup, isHTML)
+  File "/usr/lib/pymodules/python2.6/BeautifulSoup.py", line 1899, in _detectEncoding
+    xml_encoding_match = re.compile(xml_encoding_re).match(xml_data)
+TypeError: expected string or buffer
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>pagina2 = BeautifulSoup(pagina.findAll(<span class="string">'div'</span>)[<span class="number">0</span>])
+</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
+  File "&lt;pyshell#23&gt;", line 1, in &lt;module&gt;
+    pagina2 = BeautifulSoup(pagina.findAll('div')[0])
+  File "/usr/lib/pymodules/python2.6/BeautifulSoup.py", line 1499, in __init__
+    BeautifulStoneSoup.__init__(self, *args, **kwargs)
+  File "/usr/lib/pymodules/python2.6/BeautifulSoup.py", line 1226, in __init__
+    markup = markup.read()
+TypeError: 'NoneType' object is not callable
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>pagina.findAll(<span class="string">'div'</span>)[<span class="number">0</span>]
+</span><span class="commandsep"></span><span class="output"><span class="result-ind">6: </span><span class="result">&lt;div&gt;&lt;a href="http://submanga.com/c/140712/2"&gt;&lt;img src="http://img3.submanga.com/pages/140/140712e5e/1.jpg" /&gt;&lt;/a&gt;&lt;/div&gt;
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">print</span> pagina.findAll(<span class="string">'div'</span>)[<span class="number">0</span>]
+</span><span class="commandsep"></span><span class="output"><span class="stdout">&lt;div&gt;&lt;a href="http://submanga.com/c/140712/2"&gt;&lt;img src="http://img3.submanga.com/pages/140/140712e5e/1.jpg" /&gt;&lt;/a&gt;&lt;/div&gt;
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="builtin">str</span>(pagina.findAll(<span class="string">'div'</span>)[<span class="number">0</span>])
+</span><span class="commandsep"></span><span class="output"><span class="result-ind">7: </span><span class="result">'&lt;div&gt;&lt;a href="http://submanga.com/c/140712/2"&gt;&lt;img src="http://img3.submanga.com/pages/140/140712e5e/1.jpg" /&gt;&lt;/a&gt;&lt;/div&gt;'
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>pagina2 = BeautifulSoup(<span class="builtin">str</span>(pagina.findAll(<span class="string">'div'</span>)[<span class="number">0</span>]))
+</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>pagina2
+</span><span class="commandsep"></span><span class="output"><span class="result-ind">8: </span><span class="result">&lt;div&gt;&lt;a href="http://submanga.com/c/140712/2"&gt;&lt;img src="http://img3.submanga.com/pages/140/140712e5e/1.jpg" /&gt;&lt;/a&gt;&lt;/div&gt;
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>pagina2.a
+</span><span class="commandsep"></span><span class="output"><span class="result-ind">9: </span><span class="result">&lt;a href="http://submanga.com/c/140712/2"&gt;&lt;img src="http://img3.submanga.com/pages/140/140712e5e/1.jpg" /&gt;&lt;/a&gt;
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>pagina2.a.img
+</span><span class="commandsep"></span><span class="output"><span class="result-ind">10: </span><span class="result">&lt;img src="http://img3.submanga.com/pages/140/140712e5e/1.jpg" /&gt;
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>pagina2.a.attrs()
+</span><span class="commandsep"></span><span class="output"><span class="exception">Traceback (most recent call last):
+  File "&lt;pyshell#31&gt;", line 1, in &lt;module&gt;
+    pagina2.a.attrs()
+TypeError: 'list' object is not callable
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>pagina2.a.attrs
+</span><span class="commandsep"></span><span class="output"><span class="result-ind">11: </span><span class="result">[(u'href', u'http://submanga.com/c/140712/2')]
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">print</span> (pagina2.a.attrs[<span class="number">0</span>][<span class="number">1</span>], pagina2.a.img.attrs[<span class="number">0</span>][<span class="number">1</span>])
+</span><span class="commandsep"></span><span class="output"><span class="stdout">(u'http://submanga.com/c/140712/2', u'http://img3.submanga.com/pages/140/140712e5e/1.jpg')
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>imagen = pagina2.a.img.attrs[<span class="number">0</span>][<span class="number">1</span>]
+</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>imagen
+</span><span class="commandsep"></span><span class="output"><span class="result-ind">12: </span><span class="result">u'http://img3.submanga.com/pages/140/140712e5e/1.jpg'
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>imagen.split(<span class="string">'/'</span>)
+</span><span class="commandsep"></span><span class="output"><span class="result-ind">13: </span><span class="result">[u'http:', u'', u'img3.submanga.com', u'pages', u'140', u'140712e5e', u'1.jpg']
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>en_partes = imagen.split(<span class="string">'/'</span>)
+</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>en_partes
+</span><span class="commandsep"></span><span class="output"><span class="result-ind">14: </span><span class="result">[u'http:', u'', u'img3.submanga.com', u'pages', u'140', u'140712e5e', u'1.jpg']
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span><span class="builtin">len</span>(en_partes)
+</span><span class="commandsep"></span><span class="output"><span class="result-ind">15: </span><span class="result">7
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>nombre_imagen = en_partes[<span class="builtin">len</span>(en_partes)-<span class="number">1</span>]
+</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>nombre_imagen
+</span><span class="commandsep"></span><span class="output"><span class="result-ind">16: </span><span class="result">u'1.jpg'
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>ultima = BeautifulSoup(urllib.urlopen(<span class="string">'http://submanga.com/c/140712/18'</span>).read())
+</span><span class="commandsep"></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>ultima
+</span><span class="commandsep"></span><span class="output"><span class="result-ind">17: </span><span class="result">&lt;!DOCTYPE HTML&gt;&lt;html&gt;&lt;head&gt;&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8" /&gt;&lt;title&gt;Naruto 568 &amp;mdash; Shinshin Fansub &amp;mdash; submanga&lt;/title&gt;&lt;base href="http://submanga.com/" /&gt;&lt;link href="./s/lhd.css" type="text/css" rel="stylesheet" /&gt;&lt;/head&gt;&lt;body&gt;&lt;table id="t" border="0" cellpadding="0" cellspacing="0"&gt;&lt;tr&gt;&lt;td class="l" width="94%"&gt;&lt;a href="./" target="_top"&gt;&lt;strong&gt;submanga.com&lt;/strong&gt;&lt;/a&gt; &amp;rsaquo; &lt;a href="./scanlation/Shinshin_Fansub" target="_top"&gt;Shinshin Fansub&lt;/a&gt; &amp;rsaquo; &lt;a href="./Naruto/scanlation/Shinshin_Fansub" target="_top"&gt;Naruto&lt;/a&gt; &amp;rsaquo; &lt;a href="./Naruto/568/140712" target="_top"&gt;568&lt;/a&gt;&lt;/td&gt;&lt;th width="1%"&gt;&lt;select onchange="window.location.href='http://submanga.com/c/140712/'+this.value"&gt;&lt;option value="1"&gt;1&lt;/option&gt;&lt;option value="2"&gt;2&lt;/option&gt;&lt;option value="3"&gt;3&lt;/option&gt;&lt;option value="4"&gt;4&lt;/option&gt;&lt;option value="5"&gt;5&lt;/option&gt;&lt;option value="6"&gt;6&lt;/option&gt;&lt;option value="7"&gt;7&lt;/option&gt;&lt;option value="8"&gt;8&lt;/option&gt;&lt;option value="9"&gt;9&lt;/option&gt;&lt;option value="10"&gt;10&lt;/option&gt;&lt;option value="11"&gt;11&lt;/option&gt;&lt;option value="12"&gt;12&lt;/option&gt;&lt;option value="13"&gt;13&lt;/option&gt;&lt;option value="14"&gt;14&lt;/option&gt;&lt;option value="15"&gt;15&lt;/option&gt;&lt;option value="16"&gt;16&lt;/option&gt;&lt;option value="17"&gt;17&lt;/option&gt;&lt;option selected value="18"&gt;18&lt;/option&gt;&lt;/select&gt;&lt;/th&gt;&lt;th width="1%"&gt;&lt;a href="./hd"&gt;&lt;img src="./s/hdoff.gif" /&gt;&lt;/a&gt;&lt;/th&gt;&lt;th width="1%"&gt;&lt;a href="./ajustar"&gt;&lt;img src="./s/hda.gif" /&gt;&lt;/a&gt;&lt;/th&gt;&lt;th width="1%"&gt;&lt;a href="http://submanga.com/c/140712/17"&gt;&lt;img src="./s/hdl.gif" /&gt;&lt;/a&gt;&lt;/th&gt;&lt;th width="1%"&gt;&lt;a href="http://submanga.com/r/140712"&gt;&lt;img src="./s/hdr.gif" /&gt;&lt;/a&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/table&gt;&lt;div&gt;&lt;a href="http://submanga.com/r/140712"&gt;&lt;img src="http://img3.submanga.com/pages/140/140712e5e/18.jpg" /&gt;&lt;/a&gt;&lt;/div&gt;&lt;script type="text/javascript"&gt;document.onkeydown=M;function M(e){if(!e)var e=window.event;if(e.keyCode)T=e.keyCode;if(e.which)T=e.which;if(T==37){window.location.href="http://submanga.com/c/140712/17"}if(T==39){window.location.href="http://submanga.com/r/140712"}}&lt;/script&gt;&lt;script src="http://www.google-analytics.com/urchin.js" type="text/javascript"&gt;&lt;/script&gt;&lt;script type="text/javascript"&gt;_uacct="UA-27123143-1";urchinTracker();&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span>ultima.div
+</span><span class="commandsep"></span><span class="output"><span class="result-ind">18: </span><span class="result">&lt;div&gt;&lt;a href="http://submanga.com/r/140712"&gt;&lt;img src="http://img3.submanga.com/pages/140/140712e5e/18.jpg" /&gt;&lt;/a&gt;&lt;/div&gt;
+</span></span><span class="command"><span class="prompt">&gt;&gt;&gt; </span></span></body>
+</html>
